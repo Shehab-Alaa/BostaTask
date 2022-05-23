@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name" translatable="false">Bosta Task</string>
+
+    <string name="server_error">Server Error, please try again later</string>
+    <string name="invalid_data">The given data was invalid, Please choose another one.</string>
+    <string name="network_error">Please check your network and try again…</string>
+    <string name="search_amazon_eg">Search Amazon.eg</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="top_deal">Top Deal:</string>
+    <string name="free_delivery">FREE delivery</string>
+    <string name="for_tomorrow">for Tomorrow</string>
+    <string name="fulfilled_by">Fulfilled by</string>
+    <string name="amazon">Amazon</string>
+    <string name="sold_by">Sold by</string>
+    <string name="amazon_seller">Amazon Seller</string>
+    <string name="add_to_list">ADD TO LIST</string>
+    <string name="details">Details</string>
+    <string name="colour">Colour</string>
+    <string name="size">Size</string>
+    <string name="material">Material</string>
+    <string name="item_weight">Item weight</string>
+    <string name="home_makeover_sale_best_deals">Home Makeover Sale best deals</string>
+    <string name="top_picks_for_you">Top picks for you</string>
+
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="transparent_black">#77000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="app_background">#ffffff</color>
+    <color name="status_bar_color">#93dfdb</color>
+
+    <color name="teal_1">#84d8e3</color>
+    <color name="teal_2">#93dfdb</color>
+    <color name="teal_3">#a6e6ce</color>
+    <color name="teal_4">#67d8e8</color>
+
+    <color name="blue_1">#008397</color>
+    <color name="blue_2">#256264</color>
+
+    <color name="grey_1">#eeeeee</color>
+    <color name="grey_2">#e1e4e5</color>
+    <color name="grey_3">#5b5b5b</color>
+
+    <color name="ripple_effect">#BDBDBD</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="yellow_1">#fed813</color>
+
+    <color name="orange_1">#ffa51d</color>
+
+    <color name="red_1">#a53c1d</color>
+</resources>
