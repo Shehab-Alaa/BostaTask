@@ -16,7 +16,8 @@ object LocalImagesUtil {
         9 to R.drawable.ic_mixer,
         10 to R.drawable.ic_refrigerator,
         11 to R.drawable.ic_oven,
-        12 to R.drawable.ic_microwave
+        12 to R.drawable.ic_microwave,
+        13 to R.drawable.ic_car
     )
 
     fun getImageRes(imgId: Int) = imagesRes[imgId] ?: R.drawable.ic_camera_temp_img

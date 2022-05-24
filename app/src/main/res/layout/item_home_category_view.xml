@@ -10,8 +10,42 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_110sdp">
+        android:layout_width="@dimen/_60sdp"
+        android:layout_margin="@dimen/_3sdp"
+        android:layout_height="@dimen/_75sdp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/half_grey_circle_bg"
+            android:padding="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                imageRes="@{item.image}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                tools:srcCompat="@drawable/ic_coupons" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView24"
+            style="@style/AppBlackTV"
+            android:layout_width="match_parent"
+            android:text="@{item.title}"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/grey_3"
+            android:textAlignment="center"
+            tools:text="Electronics"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayout2"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
