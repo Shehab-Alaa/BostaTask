@@ -8,6 +8,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import com.bosta.task.BR
+import com.bosta.task.util.Codes.BACK_BUTTON_PRESSED
 import com.bosta.task.util.Status
 import com.bosta.task.util.exts.bindView
 import com.bosta.task.util.exts.castToActivity
@@ -32,6 +33,11 @@ abstract class BaseFragment<B :ViewDataBinding, VM : ViewModel> : Fragment() {
         binding.setVariable(BR.viewModel, mViewModel)
 
         (mViewModel as BaseViewModel).apply {
+            observe(mutableLiveData){
+                when(it){
+                    BACK_BUTTON_PRESSED -> requireActivity().onBackPressed()
+                }
+            }
             observe(resultLiveData){
                 when(it?.status){
                     Status.LOADING -> closeKeyboard()

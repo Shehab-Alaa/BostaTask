@@ -21,15 +21,15 @@ class HomeViewModel(dataManager: DataSourceManager) : BaseViewModel(dataManager)
     }
 
     private fun getHomeCategories(){
-
+        homeCategoriesAdapter.setList(apiRepository.getHomeCategoriesResponse())
     }
 
     private fun getBestSalesItems(){
-
+        bestSalesAdapter.setList(apiRepository.getBestSalesResponse())
     }
 
     private fun getTopPicksItems(){
-
+        topPicksAdapter.setList(apiRepository.getTopPicksResponse())
     }
 
     private fun onCategoryItemClick(item: HomeCategoryItem) {

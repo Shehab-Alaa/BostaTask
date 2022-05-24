@@ -2,7 +2,6 @@ package com.bosta.task.app
 
 import android.app.Application
 import com.bosta.task.BuildConfig
-import com.bosta.task.di.networkModule
 import com.bosta.task.di.repositoriesModule
 import com.bosta.task.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
@@ -19,7 +18,7 @@ class BostaTaskApplication : Application() {
         startKoin {
             androidLogger(if (BuildConfig.DEBUG) Level.ERROR else Level.NONE)
             androidContext(this@BostaTaskApplication)
-            modules(listOf(networkModule, viewModelModule, repositoriesModule))
+            modules(listOf(viewModelModule, repositoriesModule))
         }
     }
 

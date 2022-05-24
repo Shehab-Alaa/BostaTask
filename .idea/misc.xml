@@ -10,6 +10,7 @@
         <entry key="..\:/Learning/BostaTask/app/src/main/res/drawable/ic_launcher_background.xml" value="0.18518518518518517" />
         <entry key="..\:/Learning/BostaTask/app/src/main/res/drawable/ic_search.xml" value="0.20833333333333334" />
         <entry key="..\:/Learning/BostaTask/app/src/main/res/drawable/orange_btn_bg.xml" value="0.18518518518518517" />
+        <entry key="..\:/Learning/BostaTask/app/src/main/res/drawable/round_grey_btn_bg.xml" value="0.17685185185185184" />
         <entry key="..\:/Learning/BostaTask/app/src/main/res/drawable/teal_gradient_bg.xml" value="0.20833333333333334" />
         <entry key="..\:/Learning/BostaTask/app/src/main/res/drawable/tv_transparent_bg.xml" value="0.18518518518518517" />
         <entry key="..\:/Learning/BostaTask/app/src/main/res/drawable/white_border_til.xml" value="0.18518518518518517" />
@@ -17,7 +18,7 @@
         <entry key="..\:/Learning/BostaTask/app/src/main/res/layout/activity_main.xml" value="0.1921875" />
         <entry key="..\:/Learning/BostaTask/app/src/main/res/layout/custom_toolbar.xml" value="0.25" />
         <entry key="..\:/Learning/BostaTask/app/src/main/res/layout/fragment_home.xml" value="0.33" />
-        <entry key="..\:/Learning/BostaTask/app/src/main/res/layout/fragment_item_details.xml" value="0.33" />
+        <entry key="..\:/Learning/BostaTask/app/src/main/res/layout/fragment_item_details.xml" value="0.22" />
         <entry key="..\:/Learning/BostaTask/app/src/main/res/layout/item_best_sales_view.xml" value="0.33" />
         <entry key="..\:/Learning/BostaTask/app/src/main/res/layout/item_home_category_view.xml" value="0.1921875" />
         <entry key="..\:/Learning/BostaTask/app/src/main/res/layout/item_top_picks_view.xml" value="0.25" />

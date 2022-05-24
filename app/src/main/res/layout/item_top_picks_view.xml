@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                loadImage="@{item.image}"
+                imageRes="@{item.image}"
                 tools:srcCompat="@drawable/ic_camera_temp_img" />
         </RelativeLayout>
 

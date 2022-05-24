@@ -18,7 +18,7 @@ data class HomeItem(
     @SerializedName("image")
     var image: Int,
     @SerializedName("quantity")
-    var quantity: String,
+    var quantity: Int,
     @SerializedName("sale")
     var sale: String,
     @SerializedName("color")
@@ -32,7 +32,7 @@ data class HomeItem(
     @SerializedName("rate")
     var rate: Int,
     @SerializedName("num_of_rates")
-    var numOfRates: String,
+    var numOfRates: Int,
 ) : BaseParcelable, Parcelable {
     override fun unique(): Any = id
 

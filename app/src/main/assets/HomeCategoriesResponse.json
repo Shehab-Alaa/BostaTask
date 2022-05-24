@@ -1,22 +1,22 @@
 [
   {
-    "id": 0,
-    "title": "Coupons",
-    "image": ""
+    "id":0,
+    "title":"Coupons",
+    "image":1
   },
   {
-    "id": 1,
-    "title": "Electronics",
-    "image": ""
+    "id":1,
+    "title":"Electronics",
+    "image":2
   },
   {
-    "id": 2,
-    "title": "Sports",
-    "image": ""
+    "id":2,
+    "title":"Sports",
+    "image":3
   },
   {
     "id":3,
-    "title": "Clothes",
-    "image": ""
+    "title":"Clothes",
+    "image":4
   }
 ]

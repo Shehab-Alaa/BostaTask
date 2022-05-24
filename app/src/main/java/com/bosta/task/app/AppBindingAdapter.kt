@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.request.CachePolicy
 import com.bosta.task.R
+import com.bosta.task.util.LocalImagesUtil
 import com.bosta.task.util.SpacesItemDecorationUtil
 import com.bosta.task.util.exts.gone
 import com.bosta.task.util.exts.isValidUrl
@@ -119,4 +120,9 @@ fun bindAdapter(recyclerView: RecyclerView, adapter: ListAdapter<*, *>?, divider
             }
         }
     } ?: Timber.e("adapter is null")
+}
+
+@BindingAdapter("imageRes")
+fun setImageRes(imageView: ImageView, imgId: Int) {
+    imageView.setImageResource(LocalImagesUtil.getImageRes(imgId))
 }
