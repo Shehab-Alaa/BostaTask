@@ -1,0 +1,62 @@
+[
+  {
+    "id": 0,
+    "title": "Mixer",
+    "price": 450.00,
+    "brand": "Raya",
+    "image": "",
+    "Quantity": 4,
+    "sale": "20%",
+    "color": "Red",
+    "size": "Medium",
+    "material": "Plastic",
+    "itemWeight": 1.35,
+    "rate": 4,
+    "numOfRates": 38
+  },
+  {
+    "id": 1,
+    "title": "Refrigerator",
+    "price": 5450.00,
+    "brand": "Raya",
+    "image": "",
+    "Quantity": 3,
+    "sale": "30%",
+    "color": "Blue",
+    "size": "Large",
+    "material": "Plastic",
+    "itemWeight": 20.50,
+    "rate": 4,
+    "numOfRates": 22
+  },
+  {
+    "id": 2,
+    "title": "Oven",
+    "price": 8450.00,
+    "brand": "Raya",
+    "image": "",
+    "Quantity": 7,
+    "sale": "10%",
+    "color": "Black",
+    "size": "Large",
+    "material": "Iron",
+    "itemWeight": 31.35,
+    "rate": 5,
+    "numOfRates": 12
+  },
+  {
+    "id": 3,
+    "title": "Microwave",
+    "price": 10450.00,
+    "brand": "Raya",
+    "image": "",
+    "Quantity": 5,
+    "sale": "20%",
+    "color": "Blue",
+    "size": "Medium",
+    "material": "Plastic",
+    "itemWeight": 11.35,
+    "rate": 5,
+    "numOfRates": 34
+  }
+]
