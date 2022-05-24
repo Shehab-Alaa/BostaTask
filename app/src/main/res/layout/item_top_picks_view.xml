@@ -10,9 +10,9 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="@dimen/_160sdp"
-        android:layout_margin="@dimen/_3sdp"
-        android:layout_height="@dimen/_180sdp"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_margin="@dimen/_2sdp"
+        android:layout_height="@dimen/_185sdp"
         android:background="@color/grey_1">
 
         <RelativeLayout
@@ -26,10 +26,10 @@
 
             <ImageView
                 android:id="@+id/imageView2"
+                imageRes="@{item.image}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                imageRes="@{item.image}"
                 tools:srcCompat="@drawable/ic_camera_temp_img" />
         </RelativeLayout>
 
@@ -37,11 +37,10 @@
             android:id="@+id/textView23"
             style="@style/AppBlackTV"
             android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/_3sdp"
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginEnd="@dimen/_3sdp"
             android:text="@{item.title}"
-            android:textSize="@dimen/_9ssp"
+            android:textSize="@dimen/_12ssp"
             android:textColor="@color/grey_3"
             tools:text="Nikon Coolpix B600"
             app:layout_constraintEnd_toEndOf="parent"
@@ -53,10 +52,10 @@
             style="@style/AppBlackTV"
             android:layout_width="match_parent"
             android:layout_marginStart="@dimen/_12sdp"
-            android:layout_marginEnd="@dimen/_3sdp"
-            android:layout_marginBottom="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
             android:text="@{item.itemPriceInEGP}"
-            android:textSize="@dimen/_9ssp"
+            android:textSize="@dimen/_12ssp"
             android:textColor="@color/grey_3"
             tools:text="EGP5,649.00"
             app:layout_constraintBottom_toBottomOf="parent"

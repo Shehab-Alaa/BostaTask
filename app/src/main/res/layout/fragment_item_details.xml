@@ -32,7 +32,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:padding="@dimen/_3sdp">
+                android:padding="@dimen/_9sdp">
 
                 <TextView
                     android:id="@+id/textView"
@@ -101,7 +101,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_marginEnd="@dimen/_3sdp"
                         android:background="@drawable/round_grey_btn_bg"
-                        app:srcCompat="@drawable/ic_share" />
+                        app:srcCompat="@drawable/ic_share"
+                        app:tint="@color/transparent_black" />
 
                     <ImageButton
                         android:id="@+id/favorite_btn"
@@ -110,7 +111,8 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="@dimen/_3sdp"
                         android:background="@drawable/round_grey_btn_bg"
-                        app:srcCompat="@drawable/ic_favorite" />
+                        app:srcCompat="@drawable/ic_favorite"
+                        app:tint="@color/transparent_black" />
 
                 </RelativeLayout>
 
@@ -126,13 +128,14 @@
                 <TextView
                     android:id="@+id/textView5"
                     style="@style/AppBaseTV"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:layout_marginStart="@dimen/_6sdp"
-                    android:textColor="@color/red_1"
                     android:text="@{viewModel.homeItem.itemPriceInEGP}"
-                    tools:text="EGP300.00"
+                    android:textColor="@color/red_1"
                     android:textSize="@dimen/_13ssp"
                     app:layout_constraintStart_toEndOf="@+id/textView4"
-                    app:layout_constraintTop_toTopOf="@+id/textView4" />
+                    app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+                    tools:text="EGP300.00" />
 
                 <TextView
                     android:id="@+id/textView6"

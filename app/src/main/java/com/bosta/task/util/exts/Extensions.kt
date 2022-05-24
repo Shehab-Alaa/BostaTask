@@ -2,59 +2,25 @@ package com.bosta.task.util.exts
 
 import android.app.Activity
 import android.content.Context
-import android.content.Intent
-import android.graphics.drawable.Drawable
-import android.os.Bundle
-import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.webkit.URLUtil
-import android.widget.ImageView
-import android.widget.ProgressBar
-import androidx.annotation.IdRes
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.*
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.NavDirections
 import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.bosta.task.R
-import com.bosta.task.base.BaseViewModel
 import com.bosta.task.util.AppConstants.TIMBER_TAG
-import com.bosta.task.util.AppUtil
-import com.bosta.task.util.Resource
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.DataSource
-import com.bumptech.glide.load.engine.GlideException
-import com.bumptech.glide.request.RequestListener
-import com.bumptech.glide.request.target.Target
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
 import timber.log.Timber
 import java.lang.reflect.ParameterizedType
-
-fun ViewModel.launchDataLoad(
-    execution: suspend CoroutineScope.() -> Unit,
-    errorReturned: suspend CoroutineScope.(Throwable) -> Unit,
-    finallyBlock: (suspend CoroutineScope.() -> Unit)? = null
-) {
-
-    this.viewModelScope.launch {
-        try {
-            execution()
-        } catch (e: Throwable) {
-            errorReturned(e)
-        } finally {
-            finallyBlock?.invoke(this)
-        }
-    }
-}
-
 
 fun <B : ViewDataBinding> LifecycleOwner.bindView(container: ViewGroup? = null): B {
     return if (this is Activity) {
@@ -122,59 +88,6 @@ fun LifecycleOwner.navigateSafe(directions: NavDirections, navOptions: NavOption
     if (canNavigate(navController, mView)) navController.navigate(directions, navOptions)
 }
 
-fun LifecycleOwner.navigateSafe(@IdRes navFragmentRes: Int, bundle: Bundle? = null) {
-    val navController: NavController?
-    val mView: View?
-    if (this is Fragment) {
-        navController = findNavController()
-        mView = view
-    } else {
-        val activity = this as Activity
-        navController = activity.findNavController(R.id.fragment_container_view)
-        mView = currentFocus
-    }
-    if (canNavigate(navController, mView)) navController.navigate(navFragmentRes, bundle)
-}
-
-fun <T : Any> BaseViewModel.requestNewCall(
-    networkCall: () -> T,
-    successCallBack: (T) -> Unit
-){
-    if (!AppUtil.isNetworkAvailable(app)) {
-        postResult(Resource.message(getString(R.string.network_error)))
-        return
-    }
-    viewModelScope.launch {
-        try {
-            val res = networkCall() // execute
-            successCallBack(res)
-        } catch (e: Exception) {
-            Timber.tag("Here").i("Error: $e ,Message: ${e.message}")
-        }
-    }
-}
-
-inline fun <reified T : AppCompatActivity> Activity.showActivity(
-    intent: Intent = Intent()
-) {
-    intent.setClass(this, T::class.java)
-    this.startActivity(intent)
-    this.finish()
-}
-
-inline fun <reified T : AppCompatActivity> Fragment.castToActivity(
-    callback: (T?) -> Unit
-): T? {
-    return if (requireActivity() is T) {
-        callback(requireActivity() as T)
-        requireActivity() as T
-    } else {
-        Timber.e("class cast exception, check your fragment is in the correct activity")
-        callback(null)
-        null
-    }
-}
-
 fun Fragment.showKeyboard(show: Boolean) {
     view?.let { activity?.showKeyboard(it, show) }
 }
@@ -203,45 +116,6 @@ fun View.visible() {
 
 fun View.gone() {
     visibility = View.GONE
-}
-
-fun String.isValidUrl(): Boolean {
-    return try {
-        URLUtil.isValidUrl(this) && Patterns.WEB_URL.matcher(this).matches()
-    } catch (e: Exception) {
-        Timber.e(e)
-        false
-    }
-}
-
-fun ImageView.loadImageFromURL(url: String, progressBar: ProgressBar? = null) {
-    Glide.with(this).load(url)
-        .error(R.drawable.ic_broken_image)
-        .addListener(object : RequestListener<Drawable> {
-            override fun onLoadFailed(
-                e: GlideException?,
-                model: Any?,
-                target: Target<Drawable>?,
-                isFirstResource: Boolean
-            ): Boolean {
-                Timber.e("$e")
-                setImageResource(R.drawable.ic_broken_image)
-                return true
-            }
-
-            override fun onResourceReady(
-                resource: Drawable?,
-                model: Any?,
-                target: Target<Drawable>?,
-                dataSource: DataSource?,
-                isFirstResource: Boolean
-            ): Boolean {
-                setImageDrawable(resource)
-                return true
-            }
-
-        })
-        .into(this)
 }
 
 fun Context.logTimber(message: String){

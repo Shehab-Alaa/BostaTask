@@ -10,9 +10,9 @@
     "color": "Red",
     "size": "Medium",
     "material": "Plastic",
-    "itemWeight": 1.35,
+    "item_weight": 1.35,
     "rate": 4,
-    "numOfRates": 38
+    "num_of_rates": 38
   },
   {
     "id": 1,
@@ -25,9 +25,9 @@
     "color": "Blue",
     "size": "Large",
     "material": "Plastic",
-    "itemWeight": 20.50,
+    "item_weight": 20.50,
     "rate": 4,
-    "numOfRates": 22
+    "num_of_rates": 22
   },
   {
     "id": 2,
@@ -40,9 +40,9 @@
     "color": "Black",
     "size": "Large",
     "material": "Iron",
-    "itemWeight": 31.35,
+    "item_weight": 31.35,
     "rate": 5,
-    "numOfRates": 12
+    "num_of_rates": 12
   },
   {
     "id": 3,
@@ -55,8 +55,8 @@
     "color": "Blue",
     "size": "Medium",
     "material": "Plastic",
-    "itemWeight": 11.35,
+    "item_weight": 11.35,
     "rate": 5,
-    "numOfRates": 34
+    "num_of_rates": 34
   }
 ]

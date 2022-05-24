@@ -11,7 +11,6 @@ import com.bosta.task.BR
 import com.bosta.task.util.Codes.BACK_BUTTON_PRESSED
 import com.bosta.task.util.Status
 import com.bosta.task.util.exts.bindView
-import com.bosta.task.util.exts.castToActivity
 import com.bosta.task.util.exts.observe
 import com.bosta.task.util.exts.showKeyboard
 
@@ -44,12 +43,6 @@ abstract class BaseFragment<B :ViewDataBinding, VM : ViewModel> : Fragment() {
                     else -> {}
                 }
             }
-        }
-    }
-
-    fun showProgress(show: Boolean = true) {
-        castToActivity<BaseActivity<*, *>> {
-            it?.baseShowProgress?.set(show)
         }
     }
 

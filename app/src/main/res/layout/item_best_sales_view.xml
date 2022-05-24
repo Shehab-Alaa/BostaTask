@@ -10,14 +10,14 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="@dimen/_100sdp"
+        android:layout_width="@dimen/_120sdp"
         android:layout_margin="@dimen/_3sdp"
-        android:layout_height="@dimen/_160sdp">
+        android:layout_height="@dimen/_180sdp">
 
         <RelativeLayout
             android:id="@+id/relativeLayout2"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_130sdp"
+            android:layout_height="@dimen/_150sdp"
             android:background="@color/teal_4"
             android:padding="@dimen/_12sdp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_marginTop="@dimen/_3sdp"
             android:text="@{item.bestSellItemTitle}"
-            android:textSize="@dimen/_9ssp"
+            android:textSize="@dimen/_11ssp"
             android:textColor="@color/grey_3"
             tools:text="Kitchen essentials |"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,7 @@
             style="@style/AppBlackTV"
             android:layout_width="match_parent"
             android:text="@{item.salePercentage}"
-            android:textSize="@dimen/_9ssp"
+            android:textSize="@dimen/_11ssp"
             android:textColor="@color/grey_3"
             tools:text="up to 20% off"
             app:layout_constraintBottom_toBottomOf="parent"

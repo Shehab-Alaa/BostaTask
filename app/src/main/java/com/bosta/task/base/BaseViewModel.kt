@@ -11,7 +11,7 @@ import com.bosta.task.data.remote.ApiDataSource
 import com.bosta.task.util.Codes.BACK_BUTTON_PRESSED
 import com.bosta.task.util.Resource
 
-open class BaseViewModel(val dataManager: DataSourceManager) : AndroidViewModel(dataManager.getAppContext()), Observable {
+open class BaseViewModel(dataManager: DataSourceManager) : AndroidViewModel(dataManager.getAppContext()), Observable {
 
     val app : Application = dataManager.getAppContext()
     val apiRepository : ApiDataSource = dataManager.getApiRepository()

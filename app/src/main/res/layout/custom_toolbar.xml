@@ -46,7 +46,7 @@
                 style="@style/WhiteBorderTIL"
                 android:layout_width="0dp"
                 android:layout_marginStart="@dimen/_12sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
                 app:layout_constraintStart_toEndOf="@id/back_btn"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
